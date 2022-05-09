@@ -90,13 +90,8 @@ public class Player : MonoBehaviour
         }
 
         //Dynamique
-
-        
-        
         float vInput = Input.GetAxis("Vertical"); // entre -1 et 1
         float hInput = Input.GetAxisRaw("Horizontal"); // entre -1 et 1
-        
-
         /*
         //MODE POSITIONNEL
         //pseudo dynamique (on se tp, comme en cinématique)     +     proche d'un cprtment cinématique
@@ -117,7 +112,6 @@ public class Player : MonoBehaviour
         */
 
         /* MODE VELOCITY */
-        
         Vector3 targetVelocity = vInput * m_TranslationSpeed * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
         Vector3 velocityChange = targetVelocity - m_Rigidbody.velocity;
         m_Rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
@@ -129,8 +123,7 @@ public class Player : MonoBehaviour
         Quaternion qRotUpright = Quaternion.FromToRotation(transform.up, Vector3.up);
         Quaternion qOrientSlightlyUpright = Quaternion.Slerp(transform.rotation, qRotUpright * transform.rotation, Time.fixedDeltaTime * 4);
         m_Rigidbody.MoveRotation(qOrientSlightlyUpright);
-         
-        
+
         /* MODE ACCELERATION 
         Vector3 acceleration = vInput * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized * 3;
         m_Rigidbody.AddForce(acceleration, ForceMode.Acceleration);

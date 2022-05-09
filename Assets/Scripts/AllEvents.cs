@@ -13,7 +13,6 @@ public class GameInitLevelEvent : SDD.Events.Event
 public class GamePlayEvent : SDD.Events.Event
 {
 }
-
 public class GamePauseEvent : SDD.Events.Event
 {
 }
@@ -67,10 +66,7 @@ public class LevelHasBeenInitializedEvent:SDD.Events.Event
 	public Transform ePlayerSpawnPoint;
 }
 #endregion
-
-#region Ball events
 public class BallHasCollidedEvent : SDD.Events.Event
 {
 	public GameObject eCollidedGO;
 }
-#endregion
