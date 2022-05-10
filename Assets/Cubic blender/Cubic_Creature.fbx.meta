@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 8dd143455686471479eaafad0bf089bb
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 7031849649114977342
+    second: Body|CubeWalk.001
+  - first:
+      74: 4770731656451194196
+    second: Body|walkingCube
+  - first:
+      74: 3686083770751840670
+    second: Character controler|CubeWalk.001
+  - first:
+      74: 8369042865847361810
+    second: Character controler|walkingCube
+  - first:
+      74: 3630193162925133760
+    second: IK Target|CubeWalk.001
+  - first:
+      74: -4124473633045377738
+    second: IK Target|IK TargetAction.001
+  - first:
+      74: -2487593326831624456
+    second: IK Target|IK TargetAction.006
+  - first:
+      74: -4021352426069346851
+    second: IK Target|IK TargetAction.007
+  - first:
+      74: -6926592582711260612
+    second: IK Target|IK TargetAction.009
+  - first:
+      74: -5585304900698601355
+    second: IK Target|walkingCube
+  - first:
+      74: -6815067394382809517
+    second: IK Target.001|CubeWalk.001
+  - first:
+      74: 5348053225168103713
+    second: IK Target.001|IK TargetAction.001
+  - first:
+      74: -9035319419182872696
+    second: IK Target.001|IK TargetAction.006
+  - first:
+      74: -4131618989103959406
+    second: IK Target.001|IK TargetAction.007
+  - first:
+      74: -3134816208546976704
+    second: IK Target.001|IK TargetAction.009
+  - first:
+      74: -5856424006535752028
+    second: IK Target.001|walkingCube
+  - first:
+      74: -7357617005221854561
+    second: IK Target.002|CubeWalk.001
+  - first:
+      74: -1311565352370204837
+    second: IK Target.002|IK TargetAction.001
+  - first:
+      74: -6232050975045191843
+    second: IK Target.002|IK TargetAction.006
+  - first:
+      74: -2507480878564076397
+    second: IK Target.002|IK TargetAction.007
+  - first:
+      74: -371837719973453132
+    second: IK Target.002|IK TargetAction.009
+  - first:
+      74: 7236213195496211318
+    second: IK Target.002|walkingCube
+  - first:
+      74: 4270221434671577899
+    second: IK Target.003|CubeWalk.001
+  - first:
+      74: 1291684675123157509
+    second: IK Target.003|IK TargetAction.001
+  - first:
+      74: 4210862271633080266
+    second: IK Target.003|IK TargetAction.006
+  - first:
+      74: 8399571539723471132
+    second: IK Target.003|IK TargetAction.007
+  - first:
+      74: 523603936922037992
+    second: IK Target.003|IK TargetAction.009
+  - first:
+      74: 4045517630010513397
+    second: IK Target.003|walkingCube
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
