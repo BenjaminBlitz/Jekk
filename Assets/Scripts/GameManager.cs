@@ -81,22 +81,4 @@ public class GameManager : MonoBehaviour
     {
 
     }
-    void GainScore(GameObject go)
-    {
-        if (!go) return;
-
-        int totalNewlyGainderScore = 0;
-        IScore[] scores = go.GetComponentsInChildren<IScore>();
-        for (int i = 0; i < scores.Length; i++) totalNewlyGainderScore += scores[i].Score;
-        SetScore(m_Score + totalNewlyGainderScore);
-    }
-    void BallHasCollideEventCallback(BallHasCollideEvent e)
-    {
-        GainScore(e.eCollision);
-    }
-
-    void PlayButtonClickedEventCallback(PlayButtonClickedEvent e)
-    {
-        PlayButtonClickedEventCallback();
-    }
 }
