@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+
+public class ExperienceBar : MonoBehaviour
+{
+    public Slider slider;
+    public Image fill;
+
+    public TextMeshProUGUI lvlText;
+
+    public void SetMaxExp(int exp)
+    {
+        slider.maxValue = exp;
+        slider.value = 0;
+    }
+
+    public void SetExp(int exp)
+    {
+        slider.value = exp;
+    }
+
+    public void SetLvlText(int currentLvl)
+    {
+        lvlText.text = currentLvl.ToString();
+    }
+}
