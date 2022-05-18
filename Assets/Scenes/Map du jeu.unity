@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2214,11 +2214,7 @@ Transform:
   - {fileID: 710128040}
   - {fileID: 1110589577}
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
   m_RootOrder: 0
-=======
-  m_RootOrder: 4
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &530483848
 AudioSource:
@@ -5012,7 +5008,7 @@ GameObject:
   - component: {fileID: 1110589577}
   m_Layer: 0
   m_Name: Camera Parent
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17312,7 +17308,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 10, z: 0}
 --- !u!23 &1645878854930681066
 MeshRenderer:
@@ -22385,7 +22381,7 @@ Transform:
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 52.645, z: 0}
 --- !u!23 &3807690658132051482
 MeshRenderer:
@@ -22668,7 +22664,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 180, y: 34, z: 0}
 --- !u!23 &4102169511152064288
 MeshRenderer:
@@ -22813,7 +22809,7 @@ Transform:
   m_LocalScale: {x: 250, y: 150, z: 450}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 18.689, z: 0}
 --- !u!1 &4151725995064155793
 GameObject:
