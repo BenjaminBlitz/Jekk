@@ -531,7 +531,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82648776}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43f08b425ed96a54dab90d98b93ca44a, type: 3}
   m_Name: 
@@ -3083,6 +3083,7 @@ GameObject:
   - component: {fileID: 530483844}
   - component: {fileID: 530483843}
   - component: {fileID: 530483840}
+  - component: {fileID: 530483839}
   m_Layer: 0
   m_Name: Ethan
   m_TagString: Player
@@ -3090,6 +3091,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &530483839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530483838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f08b425ed96a54dab90d98b93ca44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  currentExp: 0
+  lvlUpExp: 400
+  lvlPlayer: 1
+  healthBar: {fileID: 671726568}
+  experienceBar: {fileID: 676391495}
 --- !u!143 &530483840
 CharacterController:
   m_ObjectHideFlags: 0
