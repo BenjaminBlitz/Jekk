@@ -39,6 +39,7 @@ public class GameStatisticsChangedEvent : SDD.Events.Event
 #region MenuManager Events
 public class EscapeButtonClickedEvent : SDD.Events.Event
 {
+
 }
 public class PlayButtonClickedEvent : SDD.Events.Event
 {
