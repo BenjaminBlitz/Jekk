@@ -543,6 +543,11 @@ MonoBehaviour:
   lvlPlayer: 1
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
+  m_BulletPrefab: {fileID: 0}
+  m_BulletInnitSpeed: 0
+  m_BulletSpawnTransform: {fileID: 0}
+  m_BulletLifeDuration: 0
+  m_CoolDownDuration: 0
 --- !u!4 &82648778
 Transform:
   m_ObjectHideFlags: 0
@@ -3576,6 +3581,36 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: 30.5}
   m_SizeDelta: {x: -182, y: -123}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &478074839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 478074840}
+  m_Layer: 0
+  m_Name: Bullet Spawn Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &478074840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478074839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.06, z: 0.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 530483847}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485317067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +3941,11 @@ MonoBehaviour:
   lvlPlayer: 1
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
+  m_BulletPrefab: {fileID: 8637650807231145403, guid: 90ef557861283e84f87ed053121801f2, type: 3}
+  m_BulletInnitSpeed: 50
+  m_BulletSpawnTransform: {fileID: 478074840}
+  m_BulletLifeDuration: 15
+  m_CoolDownDuration: 0.3
 --- !u!143 &530483840
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4007,6 +4047,7 @@ Transform:
   - {fileID: 798898165}
   - {fileID: 710128040}
   - {fileID: 1110589577}
+  - {fileID: 478074840}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
