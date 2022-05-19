@@ -4139,7 +4139,7 @@ MonoBehaviour:
   m_BulletPrefab: {fileID: 8637650807231145403, guid: 90ef557861283e84f87ed053121801f2, type: 3}
   m_BulletInnitSpeed: 50
   m_BulletSpawnTransform: {fileID: 478074840}
-  m_BulletLifeDuration: 15
+  m_BulletLifeDuration: 5
   m_CoolDownDuration: 0.3
 --- !u!143 &530483840
 CharacterController:
@@ -4235,7 +4235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530483838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130, y: 6.73, z: 219.6}
+  m_LocalPosition: {x: 130, y: 6.09, z: 219.6}
   m_LocalScale: {x: 2.113485, y: 2.113485, z: 2.113485}
   m_Children:
   - {fileID: 1885753030}
@@ -5431,7 +5431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641076481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23657607, y: 0.00000011920929, z: -1.4194564}
+  m_LocalPosition: {x: -0.23657607, y: -0.00000011920929, z: -1.4194564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1727353111}
