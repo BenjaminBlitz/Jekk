@@ -121,6 +121,22 @@ public class PlayerManagement : MonoBehaviour
             ShootBullet();
             m_NextShootTime = Time.time + m_CoolDownDuration;
         }
+        // SHOOT2
+        if (isFiring && Time.time > m_NextShootTime)
+        {
+
+            GameObject shot = GameObject.Instantiate(m_BulletPrefab, transform.position, transform.rotation);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //shootingAudio.PlayOneShot(shootingSound, 1.0f);
+            Vector3 dir;
+
+            if (Physics.Raycast(ray, out RaycastHit hit, 30f))
+            {
+                dir = hit.point - transform.position;
+                shot.GetComponent<Rigidbody>().AddForce(dir * m_BulletInnitSpeed, ForceMode.Impulse);
+            }
+
+        }
     }
 
 }
