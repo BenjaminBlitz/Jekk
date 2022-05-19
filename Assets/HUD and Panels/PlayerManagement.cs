@@ -10,6 +10,8 @@ public class PlayerManagement : MonoBehaviour
     public int currentExp;
     public int lvlUpExp = 400;
 
+    public Inventory inventory;
+
     Dictionary<int, int> lvlManager = new Dictionary<int, int>();
 
     public int lvlPlayer = 1;
