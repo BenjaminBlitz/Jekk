@@ -22,10 +22,13 @@ public class PlayerManagement : MonoBehaviour
 
 
     [Header("Shoot Setup")]
-    [SerializeField] GameObject m_BulletPrefab;
+    //[SerializeField] GameObject m_BulletPrefab;
     [SerializeField] float m_BulletInnitSpeed;
     [SerializeField] Transform m_BulletSpawnTransform;
     [SerializeField] float m_BulletLifeDuration;
+    [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+    [SerializeField] private Transform debugTransform;
+    [SerializeField] private Transform pfBulletProjectile;
 
     //cooldown
     [SerializeField] float m_CoolDownDuration;
@@ -78,6 +81,7 @@ public class PlayerManagement : MonoBehaviour
         }
     }
 
+    /*
     void ShootBullet()
     {
         Vector3 aimPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -106,7 +110,7 @@ public class PlayerManagement : MonoBehaviour
         
 
     }
-
+    */
     void Growth()
     {
         if(lvlPlayer % 5 == 0)
@@ -140,11 +144,27 @@ public class PlayerManagement : MonoBehaviour
         {
             GetExperience(20, lvlPlayer);
         }
+        Vector3 mouseWorldPosition = Vector3.zero;
+        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        {
+            debugTransform.position = raycastHit.point;
+            mouseWorldPosition = raycastHit.point;
+        }
+
+
+
+
+
+
         // SHOOT
         bool isFiring = Input.GetButton("Fire1");
         if (isFiring && Time.time > m_NextShootTime && canShoot)
         {
-            ShootBullet();
+            //ShootBullet();
+            Vector3 aimDir = (mouseWorldPosition - m_BulletSpawnTransform.position).normalized;
+            Instantiate(pfBulletProjectile, m_BulletSpawnTransform.position, Quaternion.LookRotation(aimDir, Vector3.up));
             m_NextShootTime = Time.time + m_CoolDownDuration;
         }
         // SHOOT2

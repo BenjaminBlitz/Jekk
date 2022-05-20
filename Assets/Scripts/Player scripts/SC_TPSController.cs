@@ -6,7 +6,7 @@ public class SC_TPSController : MonoBehaviour
 {
     public float speed = 7.5f;
     public float jumpSpeed = 8.0f;
-    public float gravity = 2.0f;
+    public float gravity = 20.0f;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
@@ -14,7 +14,6 @@ public class SC_TPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
-
     [HideInInspector]
     public bool canMove = true;
 
@@ -26,6 +25,7 @@ public class SC_TPSController : MonoBehaviour
 
     void Update()
     {
+        
         if (MenuPause.GamePaused)
         {
             canMove = false;
@@ -34,26 +34,29 @@ public class SC_TPSController : MonoBehaviour
         {
             canMove = true;
         }
+        
 
         if (characterController.isGrounded)
         {
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            float curSpeedX = canMove ? speed * transform.localScale.x * Input.GetAxis("Vertical") : 0;
-            float curSpeedY = canMove ? speed * transform.localScale.x * Input.GetAxis("Horizontal") : 0;
-            moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
+            float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
+            float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
+            Vector3 targetVelocity = curSpeedX * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+            Vector3 targetVelocity2 = curSpeedY * Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
+            //moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+            moveDirection = (targetVelocity + targetVelocity2);
             if (Input.GetButton("Jump") && canMove)
             {
-                moveDirection.y = jumpSpeed * transform.localScale.x;
+                moveDirection.y = jumpSpeed;
             }
         }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        moveDirection.y -= gravity * transform.localScale.x * Time.deltaTime;
+        moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
@@ -67,5 +70,6 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
+
     }
 }
