@@ -26,6 +26,15 @@ public class SC_TPSController : MonoBehaviour
 
     void Update()
     {
+        if (MenuPause.GamePaused)
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
+
         if (characterController.isGrounded)
         {
             // We are grounded, so recalculate move direction based on axes

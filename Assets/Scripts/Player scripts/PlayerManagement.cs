@@ -18,6 +18,8 @@ public class PlayerManagement : MonoBehaviour
 
     public HealthBar healthBar;
     public ExperienceBar experienceBar;
+    public bool canShoot = true;
+
 
     [Header("Shoot Setup")]
     [SerializeField] GameObject m_BulletPrefab;
@@ -105,6 +107,15 @@ public class PlayerManagement : MonoBehaviour
     }
     void Update()
     {
+        if (MenuPause.GamePaused)
+        {
+            canShoot = false;
+        }
+        else
+        {
+            canShoot = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(10);
@@ -116,7 +127,7 @@ public class PlayerManagement : MonoBehaviour
         }
         // SHOOT
         bool isFiring = Input.GetButton("Fire1");
-        if (isFiring && Time.time > m_NextShootTime)
+        if (isFiring && Time.time > m_NextShootTime && canShoot)
         {
             ShootBullet();
             m_NextShootTime = Time.time + m_CoolDownDuration;
