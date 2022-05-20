@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -540,6 +540,7 @@ MonoBehaviour:
   currentHealth: 0
   currentExp: 0
   lvlUpExp: 400
+  inventory: {fileID: 0}
   lvlPlayer: 1
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
@@ -4027,8 +4028,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 530483847}
-  - component: {fileID: 530483848}
   - component: {fileID: 530483846}
+  - component: {fileID: 530483848}
   - component: {fileID: 530483845}
   - component: {fileID: 530483844}
   - component: {fileID: 530483843}
@@ -4057,6 +4058,7 @@ MonoBehaviour:
   currentHealth: 0
   currentExp: 0
   lvlUpExp: 400
+  inventory: {fileID: 0}
   lvlPlayer: 1
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
@@ -4159,7 +4161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530483838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130, y: 6.09, z: 220.15}
+  m_LocalPosition: {x: 130, y: 6.09, z: 220.02}
   m_LocalScale: {x: 2.113485, y: 2.113485, z: 2.113485}
   m_Children:
   - {fileID: 1885753030}

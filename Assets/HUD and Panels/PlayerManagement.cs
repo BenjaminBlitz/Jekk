@@ -122,6 +122,7 @@ public class PlayerManagement : MonoBehaviour
             m_NextShootTime = Time.time + m_CoolDownDuration;
         }
         // SHOOT2
+        /*
         if (isFiring && Time.time > m_NextShootTime)
         {
 
@@ -136,7 +137,7 @@ public class PlayerManagement : MonoBehaviour
                 shot.GetComponent<Rigidbody>().AddForce(dir * m_BulletInnitSpeed, ForceMode.Impulse);
             }
 
-        }
+        }*/
     }
 
 }
