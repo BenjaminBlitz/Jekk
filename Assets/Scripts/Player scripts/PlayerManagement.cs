@@ -9,6 +9,7 @@ public class PlayerManagement : MonoBehaviour
     public int currentHealth;
     public int currentExp;
     public int lvlUpExp = 400;
+    private Vector3 scaleChange = new Vector3(2,2,2);
 
     public Inventory inventory;
 
@@ -63,6 +64,7 @@ public class PlayerManagement : MonoBehaviour
         {
             currentExp = 0;
             lvlPlayer += 1;
+            Growth();
         }
         experienceBar.SetExp(currentExp);
         experienceBar.SetLvlText(lvlPlayer);
@@ -105,6 +107,13 @@ public class PlayerManagement : MonoBehaviour
         
 
     }
+
+    void Growth()
+    {
+        this.transform.localScale += scaleChange;
+    }
+
+
     void Update()
     {
         if (MenuPause.GamePaused)
