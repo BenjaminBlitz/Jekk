@@ -14,7 +14,8 @@ public class SC_TPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
-
+    //[SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+    //[SerializeField] private Transform debugTransform;
     [HideInInspector]
     public bool canMove = true;
 
@@ -26,6 +27,7 @@ public class SC_TPSController : MonoBehaviour
 
     void Update()
     {
+        
         if (MenuPause.GamePaused)
         {
             canMove = false;
@@ -34,6 +36,7 @@ public class SC_TPSController : MonoBehaviour
         {
             canMove = true;
         }
+        
 
         if (characterController.isGrounded)
         {
@@ -42,8 +45,10 @@ public class SC_TPSController : MonoBehaviour
             Vector3 right = transform.TransformDirection(Vector3.right);
             float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
-            moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
+            Vector3 targetVelocity = curSpeedX * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+            Vector3 targetVelocity2 = curSpeedY * Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
+            //moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+            moveDirection = (targetVelocity + targetVelocity2);
             if (Input.GetButton("Jump") && canMove)
             {
                 moveDirection.y = jumpSpeed;
@@ -67,5 +72,11 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
+        /*Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        if (Physics.Raycast(ray,out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        {
+            debugTransform.position = raycastHit.point;
+        }*/
     }
 }
