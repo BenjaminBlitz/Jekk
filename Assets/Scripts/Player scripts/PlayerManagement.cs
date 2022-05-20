@@ -113,7 +113,14 @@ public class PlayerManagement : MonoBehaviour
     */
     void Growth()
     {
-        this.transform.localScale += scaleChange;
+        if(lvlPlayer % 5 == 0)
+        {
+            this.transform.localScale *= 3;
+        }
+        else
+        {
+            this.transform.localScale *= 1.33f;
+        }
     }
 
 
