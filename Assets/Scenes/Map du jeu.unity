@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4637,7 +4637,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   debugTransform: {fileID: 2090902948}
-  pfBulletProjectile: {fileID: 8933524168019508190, guid: 90ef557861283e84f87ed053121801f2, type: 3}
+  pfBulletProjectile: {fileID: 1569443852109977404, guid: 90ef557861283e84f87ed053121801f2, type: 3}
   m_CoolDownDuration: 0.3
 --- !u!143 &530483840
 CharacterController:
@@ -4689,6 +4689,7 @@ MonoBehaviour:
   playerCameraParent: {fileID: 1110589577}
   lookSpeed: 2
   lookXLimit: 60
+  turnSmoothTime: 0.1
   canMove: 1
 --- !u!136 &530483844
 CapsuleCollider:
@@ -5858,7 +5859,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100000
   field of view: 70
   orthographic: 0
   orthographic size: 5
@@ -5894,7 +5895,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -17653,7 +17654,7 @@ MonoBehaviour:
     FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FarClipPlane: 100000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
