@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource GameMusicStart;
-    public AudioClip Music1;
+    public AudioSource GameSound;
+    public AudioClip Sound;
     bool isPlaying;
+    bool isPaused;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameMusicStart = gameObject.AddComponent<AudioSource>();
+        GameSound = gameObject.AddComponent<AudioSource>();
+        GameSound.clip = Sound;
         isPlaying = false;
+        isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!MenuPause.GamePaused && !isPlaying)
+        if (!MenuPause.GamePaused && !isPlaying)
         {
-            GameMusicStart.PlayOneShot(Music1);
+            GameSound.Play();
             isPlaying = true;
         }
         if (MenuPause.GamePaused && isPlaying)
         {
-            GameMusicStart.Pause();
+            GameSound.Pause();
             isPlaying = false;
         }
     }
