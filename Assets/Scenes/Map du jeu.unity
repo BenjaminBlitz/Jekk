@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3829,7 +3829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478074839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.06, z: 0.91}
+  m_LocalPosition: {x: 0, y: 1.374, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 530483847}
@@ -5391,7 +5391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641076481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23657607, y: -0.00000011920929, z: -1.4194564}
+  m_LocalPosition: {x: 0.47315213, y: 0.1892606, z: -1.4194564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1727353111}
@@ -11476,9 +11476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
+  ShoulderOffset: {x: 1, y: 0, z: 0}
   VerticalArmLength: 0.4
-  CameraSide: 0
+  CameraSide: 1
   CameraDistance: 3
   CameraCollisionFilter:
     serializedVersion: 2
@@ -20789,6 +20789,7 @@ GameObject:
   - component: {fileID: 4499673366721501}
   - component: {fileID: 33316550422474745}
   - component: {fileID: 23131381314019065}
+  - component: {fileID: 1187364453711974}
   m_Layer: 0
   m_Name: road_border_01 (52)
   m_TagString: Untagged
@@ -20796,6 +20797,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1187364453711974
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187364453711973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: c130271838c9d50409670a49a29a94bd, type: 3}
 --- !u!1 &1199625217388772
 GameObject:
   m_ObjectHideFlags: 0
