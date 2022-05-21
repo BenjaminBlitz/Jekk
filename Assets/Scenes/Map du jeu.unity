@@ -4601,7 +4601,6 @@ GameObject:
   - component: {fileID: 530483840}
   - component: {fileID: 530483839}
   - component: {fileID: 530483842}
-  - component: {fileID: 530483841}
   m_Layer: 3
   m_Name: Ethan
   m_TagString: Player
@@ -4641,7 +4640,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   debugTransform: {fileID: 2090902948}
-  pfBulletProjectile: {fileID: 8933524168019508190, guid: 90ef557861283e84f87ed053121801f2, type: 3}
+  pfBulletProjectile: {fileID: 1569443852109977404, guid: 90ef557861283e84f87ed053121801f2, type: 3}
   m_CoolDownDuration: 0.3
 --- !u!143 &530483840
 CharacterController:
@@ -4661,20 +4660,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.7, z: 0}
---- !u!114 &530483841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530483838}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameSound: {fileID: 1449317970}
-  Sound: {fileID: 8300000, guid: a4ce8b08a0f2db347a124fd8e1338014, type: 3}
 --- !u!114 &530483842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4707,6 +4692,7 @@ MonoBehaviour:
   playerCameraParent: {fileID: 1110589577}
   lookSpeed: 2
   lookXLimit: 60
+  turnSmoothTime: 0.1
   canMove: 1
 --- !u!136 &530483844
 CapsuleCollider:
@@ -5851,7 +5837,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641076481}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &641076485
 Camera:
   m_ObjectHideFlags: 0
@@ -5876,7 +5862,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100000
   field of view: 70
   orthographic: 0
   orthographic size: 5
@@ -5912,7 +5898,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -17672,7 +17658,7 @@ MonoBehaviour:
     FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FarClipPlane: 100000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:

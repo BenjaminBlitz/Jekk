@@ -14,7 +14,12 @@ public class SC_TPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
+    float turnSmoothVelocity;
+    public float turnSmoothTime = 0.1f;
 
+
+
+    Vector3 velocity;
     [HideInInspector]
     public bool canMove = true;
 
@@ -26,6 +31,7 @@ public class SC_TPSController : MonoBehaviour
 
     void Update()
     {
+        
         if (MenuPause.GamePaused)
         {
             canMove = false;
@@ -35,23 +41,56 @@ public class SC_TPSController : MonoBehaviour
             canMove = true;
         }
 
-        if (characterController.isGrounded)
-        {
-            // We are grounded, so recalculate move direction based on axes
-            Vector3 forward = transform.TransformDirection(Vector3.forward);
-            Vector3 right = transform.TransformDirection(Vector3.right);
-            float curSpeedX = canMove ? speed * transform.localScale.x * Input.GetAxis("Vertical") : 0;
-            float curSpeedY = canMove ? speed * transform.localScale.x * Input.GetAxis("Horizontal") : 0;
-            Vector3 targetVelocity = curSpeedX * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
-            Vector3 targetVelocity2 = curSpeedY * Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
-            //moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-            moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        //if (characterController.isGrounded)
+        //{
+        /*
 
-            if (Input.GetButton("Jump") && canMove)
-            {
-                moveDirection.y = jumpSpeed * transform.localScale.x;
-            }
+        // We are grounded, so recalculate move direction based on axes
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+        float curSpeedX = canMove ? speed * transform.localScale.x * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? speed * transform.localScale.x * Input.GetAxis("Horizontal") : 0;
+        Vector3 targetVelocity = curSpeedX * Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+        Vector3 targetVelocity2 = curSpeedY * Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
+        //moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        */
+        //jump
+        
+
+        if (characterController.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
         }
+
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpSpeed * -1 * gravity);
+        }
+        //gravity
+        velocity.y += gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
+        //walk
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + playerCameraParent.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            characterController.Move(moveDir.normalized * transform.localScale.x * speed * Time.deltaTime);
+        }
+
+        if (Input.GetButton("Jump") && characterController.isGrounded)
+        { 
+            moveDirection.y = jumpSpeed * transform.localScale.x;
+        }
+        //}
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied

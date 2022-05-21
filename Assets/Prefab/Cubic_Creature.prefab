@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 3839577771595423472}
   - component: {fileID: 3839577771595423475}
   - component: {fileID: 3839577771595423474}
+  - component: {fileID: 4875854981369160207}
   m_Layer: 0
   m_Name: Cubic_Creature
   m_TagString: Untagged
@@ -572,7 +573,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.33
   m_Pitch: 1.2
@@ -699,8 +700,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameMusicStart: {fileID: 3839577771595423473}
-  Music1: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
+  GameSound: {fileID: 3839577771595423473}
+  Sound: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
+--- !u!114 &4875854981369160207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839577771595423476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3866215380069477735
 GameObject:
   m_ObjectHideFlags: 0
