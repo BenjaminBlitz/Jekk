@@ -17,9 +17,9 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Bullet")
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            print("caca");
+            Debug.Log("caca");
             gameObject.SetActive(false);
         }
     }
