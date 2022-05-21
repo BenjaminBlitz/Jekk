@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
+  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3672,7 +3672,6 @@ GameObject:
   - component: {fileID: 414244421}
   - component: {fileID: 414244420}
   - component: {fileID: 414244422}
-  - component: {fileID: 414244426}
   m_Layer: 0
   m_Name: Cubic_Creature_2
   m_TagString: Untagged
@@ -3775,18 +3774,6 @@ Transform:
   m_Father: {fileID: 126090334}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &414244426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414244419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &416857878
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,8 +4598,6 @@ GameObject:
   - component: {fileID: 530483840}
   - component: {fileID: 530483839}
   - component: {fileID: 530483842}
-  - component: {fileID: 530483841}
-  - component: {fileID: 530483848}
   m_Layer: 3
   m_Name: Ethan
   m_TagString: Player
@@ -4652,8 +4637,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   debugTransform: {fileID: 2090902948}
-  pfBulletProjectile: {fileID: 1569443852109977404, guid: 90ef557861283e84f87ed053121801f2, type: 3}
-  m_CoolDownDuration: 0.7
+  pfBulletProjectile: {fileID: 8933524168019508190, guid: 90ef557861283e84f87ed053121801f2, type: 3}
+  m_CoolDownDuration: 0.3
 --- !u!143 &530483840
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4672,20 +4657,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.7, z: 0}
---- !u!114 &530483841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530483838}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameSound: {fileID: 1449317970}
-  Sound: {fileID: 8300000, guid: a4ce8b08a0f2db347a124fd8e1338014, type: 3}
 --- !u!114 &530483842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4728,7 +4699,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 530483838}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
@@ -4776,7 +4747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530483838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.82, y: 7.3, z: 213.9}
+  m_LocalPosition: {x: 140.82, y: 5.82, z: 208.7}
   m_LocalScale: {x: 2.113485, y: 2.113485, z: 2.113485}
   m_Children:
   - {fileID: 1885753030}
@@ -4787,20 +4758,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &530483848
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530483838}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &530516521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5847,7 +5804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641076481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47315213, y: 0.1892606, z: -1.4194564}
+  m_LocalPosition: {x: 0.47315213, y: 0.18926084, z: -1.4194564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1727353111}
@@ -29181,7 +29138,6 @@ GameObject:
   - component: {fileID: 919132147906119653}
   - component: {fileID: 919132147906119654}
   - component: {fileID: 919132147906119652}
-  - component: {fileID: 919132147906119655}
   m_Layer: 0
   m_Name: Cubic_Creature
   m_TagString: Untagged
@@ -29265,18 +29221,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &919132147906119655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147906119649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &964177749071872514
 MeshFilter:
   m_ObjectHideFlags: 0

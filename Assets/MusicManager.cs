@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
     bool isPlaying;
     bool isPaused;
     private float volume;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -23,27 +23,29 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameMusicStart.volume = this.volume;
         if (!MenuPause.GamePaused && !isPlaying)
         {
             GameMusicStart.Play();
             isPlaying = true;
         }
-        if (MenuPause.GamePaused && isPlaying)
+        if (MenuPause.GamePaused && isPlaying && !isPaused)
         {
-            this.volume = 0.2f;
-            GameMusicStart.Pause();
-            GameMusicStart.Play();
+            this.volume /= 10.0f;
             isPaused = true;
+            //Debug.Log("en pause :" + this.volume);
+
         }
         if (!MenuPause.GamePaused && isPaused)
         {
-            this.volume = 1.0f;
-            GameMusicStart.Pause();
-            GameMusicStart.Play();
+            this.volume *= 10.0f;
             isPaused = false;
+            //Debug.Log("hors pause :" + this.volume);
+
         }
         GameMusicStart.volume = this.volume;
+        GameMusicStart.Pause();
+        GameMusicStart.Play();
+        //Debug.Log(GameMusicStart.volume);
     }
 
     public void updateVolume(float volume)
