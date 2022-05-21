@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f840d8c3fd9e8f46a01fa19026205b8, type: 3}
-  m_Name: ArmorItem
+  m_Name: ArmorItem 1
   m_EditorClassIdentifier: 
   itemName: ArmorItem
   baseValue: 0
