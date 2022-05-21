@@ -17,12 +17,13 @@ public class MusicManager : MonoBehaviour
         GameMusicStart.clip = Music1;
         isPlaying = false;
         isPaused = false;
+        this.volume = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameMusicStart.volume = volume;
+        GameMusicStart.volume = this.volume;
         if (!MenuPause.GamePaused && !isPlaying)
         {
             GameMusicStart.Play();
@@ -30,14 +31,19 @@ public class MusicManager : MonoBehaviour
         }
         if (MenuPause.GamePaused && isPlaying)
         {
-            GameMusicStart.volume = 0.0f;
+            this.volume = 0.2f;
+            GameMusicStart.Pause();
+            GameMusicStart.Play();
             isPaused = true;
         }
         if (!MenuPause.GamePaused && isPaused)
         {
-            GameMusicStart.volume = 1.0f;
+            this.volume = 1.0f;
+            GameMusicStart.Pause();
+            GameMusicStart.Play();
             isPaused = false;
         }
+        GameMusicStart.volume = this.volume;
     }
 
     public void updateVolume(float volume)

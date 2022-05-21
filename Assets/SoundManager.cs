@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
     public AudioSource GameSound;
     public AudioClip Sound;
     bool isPlaying;
-    bool isPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +14,6 @@ public class SoundManager : MonoBehaviour
         GameSound = gameObject.AddComponent<AudioSource>();
         GameSound.clip = Sound;
         isPlaying = false;
-        isPaused = false;
     }
 
     // Update is called once per frame
