@@ -26,6 +26,7 @@ public class MenuPause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M) && GamePaused)
         {
             GamePaused = false;
+            MenuMusicManager.isInGame = false;
             SceneManager.LoadScene("Menu");
             //SceneManager.UnloadScene("Map du jeu");
         }
