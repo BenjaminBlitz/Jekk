@@ -3720,8 +3720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSound: {fileID: 0}
-  Sound: {fileID: 0}
+  GameSound: {fileID: 984463652}
+  Sound: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
 --- !u!95 &414244423
 Animator:
   serializedVersion: 3
@@ -29302,8 +29302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSound: {fileID: 0}
-  Sound: {fileID: 0}
+  GameSound: {fileID: 984463652}
+  Sound: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
 --- !u!65 &919132147906119653
 BoxCollider:
   m_ObjectHideFlags: 0
