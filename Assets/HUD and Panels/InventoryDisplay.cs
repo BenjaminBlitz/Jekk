@@ -51,7 +51,7 @@ public class InventoryDisplay : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
-    public void Add(Item item)
+    public void Add(Item item, PlayerManagement player)
     {
         switch (item.itemName)
         {
@@ -72,6 +72,10 @@ public class InventoryDisplay : MonoBehaviour
                 ShowAttackSpeedItem();
                 break;
             case "CriticItem":
+                if(stackCritic == 0)
+                {
+                    player.critic = 5;
+                }
                 stackCritic += 1;
                 ShowCriticItem();
                 break;

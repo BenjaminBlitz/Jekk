@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerManagement : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public int maxHealth = 1000;
+    public float currentHealth;
     public int currentExp;
+    public int damage;
+    public float armor;
+    public float critic;
+    public float attackSpeed;
     public int lvlUpExp = 400;
     private Vector3 scaleChange = new Vector3(2,2,2);
 
@@ -53,7 +57,7 @@ public class PlayerManagement : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        currentHealth -= damage * (1 - (float)armor/1000);
         healthBar.SetHealth(currentHealth);
         healthBar.SetHealthText(currentHealth, maxHealth);
     }
@@ -137,7 +141,7 @@ public class PlayerManagement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(10);
+            TakeDamage(20);
         }
 
         if (Input.GetKeyDown(KeyCode.T))
