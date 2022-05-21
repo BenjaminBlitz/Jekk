@@ -68,8 +68,7 @@ public class SC_TPSController : MonoBehaviour
             rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
-            // playerCameraParent.localScale = transform.localScale / 2.113485f;
-            playerCameraParent.localPosition = new Vector3(playerCameraParent.localPosition.x, playerCameraParent.localPosition.y, -((transform.localScale.z - 2.113485f)/15));
+            playerCameraParent.localPosition = new Vector3(-(Mathf.Atan(transform.localScale.x)*Mathf.Rad2Deg - Mathf.Atan(2.1134f) * Mathf.Rad2Deg) /110, playerCameraParent.localPosition.y, -(Mathf.Atan(transform.localScale.x) * Mathf.Rad2Deg - Mathf.Atan(2.1134f) * Mathf.Rad2Deg) / 17);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
     }
