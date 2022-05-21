@@ -3,13 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ArmorItem", menuName = "Invetory/ArmorItem")]
 public class ArmorItem : Item
 {
-    void Start()
+    void Awake()
     {
-        percentageValue = 30f;
+        percentageValue = 1f;
     }
 
     public override void ChangePlayerStats(PlayerManagement player)
     {
-        player.armor += player.armor * percentageValue/100;
+        player.armor += 1;
     }
 }

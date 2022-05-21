@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -725,8 +725,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &107405767
 BoxCollider:
@@ -1600,8 +1601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &216554022
 BoxCollider:
@@ -1846,8 +1848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &217844201
 BoxCollider:
@@ -4622,7 +4625,7 @@ MonoBehaviour:
   currentHealth: 0
   currentExp: 0
   damage: 200
-  armor: 50
+  armor: 0
   critic: 0
   attackSpeed: 0
   lvlUpExp: 400
@@ -4762,7 +4765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530483838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.82, y: 5.82, z: 208.7}
+  m_LocalPosition: {x: 140.82, y: 5.82, z: 200.47}
   m_LocalScale: {x: 2.113485, y: 2.113485, z: 2.113485}
   m_Children:
   - {fileID: 1885753030}
@@ -8192,8 +8195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &827282828
 BoxCollider:
@@ -19923,8 +19927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &1894548969
 BoxCollider:
@@ -21652,8 +21657,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!65 &2092631239
 BoxCollider:
@@ -21955,8 +21961,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  speed: 50
   playerObject: {fileID: 530483838}
-  item: {fileID: 11400000, guid: aa77817288a4ba64a8f1c9290c5faad0, type: 2}
+  item: {fileID: 11400000, guid: e86594720cdca4244aa7dcaa133eb884, type: 2}
   player: {fileID: 530483839}
 --- !u!1 &2113252460
 GameObject:

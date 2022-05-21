@@ -57,7 +57,7 @@ public class PlayerManagement : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage * (1 - (float)armor/1000);
+        currentHealth -= damage * 1/(0.05f*armor + 1);
         healthBar.SetHealth(currentHealth);
         healthBar.SetHealthText(currentHealth, maxHealth);
     }

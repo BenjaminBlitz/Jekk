@@ -30,6 +30,8 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealthText(float currentHealth, int maxHealth)
     {
-        healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+        int currHp = (int)currentHealth;
+        int maxHp = (int)maxHealth;
+        healthText.text = currHp.ToString() + "/" + maxHp.ToString();
     }
 }
