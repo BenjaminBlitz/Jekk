@@ -17486,7 +17486,7 @@ GameObject:
   - component: {fileID: 1750812488}
   - component: {fileID: 1750812487}
   - component: {fileID: 1750812486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Critic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
