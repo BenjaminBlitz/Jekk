@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     
     [SerializeField] public float healthPoints;
     public GameObject player;
+    public GameObject enemySpawner;
     public static int enemiesAlive = 0;
     int lvlMob = 1; 
     float damages = 20;
@@ -16,6 +17,8 @@ public class EnemyManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         lvlMob = player.GetComponent<PlayerManagement>().lvlPlayer;
+        enemySpawner = GetComponent<SpawnerEnemies>();
+
         if (lvlMob > 1)
         {
             healthPoints = (lvlMob * (healthPoints / 2.5f));
@@ -45,7 +48,11 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         
-
+        if(enemiesAlive == 0)
+        {
+            SpawnerEnemies.enemmyCount += 1;
+            enemySpawner.Spawning();
+        }
 
     }
     private void OnTriggerEnter(Collider other)

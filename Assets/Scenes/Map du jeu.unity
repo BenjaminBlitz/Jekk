@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
+  m_IndirectSpecularColor: {r: 0.77029306, g: 0.77334356, b: 0.75401866, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -925,6 +925,7 @@ Transform:
   - {fileID: 1815446787}
   - {fileID: 874226338}
   - {fileID: 76391114}
+  - {fileID: 1519554323}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8937,6 +8938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cubic_Creature (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3839577771595423476, guid: 279b9d200093ae540b52697010809893, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4468480192802587726, guid: 279b9d200093ae540b52697010809893, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9669,6 +9674,25 @@ Transform:
   m_Father: {fileID: 83046283}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1206714875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3839577771595423476, guid: 279b9d200093ae540b52697010809893, type: 3}
+  m_PrefabInstance: {fileID: 1240240665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206714876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206714875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010816230c558244da1ce161a3f9bd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1212324287
 GameObject:
   m_ObjectHideFlags: 0
@@ -10210,7 +10234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4468480192802587726, guid: 279b9d200093ae540b52697010809893, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: -591
       objectReference: {fileID: 0}
     - target: {fileID: 4468480192802587726, guid: 279b9d200093ae540b52697010809893, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12315,6 +12339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cubic_Creature (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3839577771595423476, guid: 279b9d200093ae540b52697010809893, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4468480192802587726, guid: 279b9d200093ae540b52697010809893, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -13305,6 +13333,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508846312}
   m_CullTransparentMesh: 1
+--- !u!1 &1519554322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519554323}
+  - component: {fileID: 1519554324}
+  m_Layer: 0
+  m_Name: generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1519554323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519554322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.0889587, y: 19.110329, z: -38.27246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 126090334}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519554324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519554322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010816230c558244da1ce161a3f9bd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1206714875}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1522410315
 GameObject:
   m_ObjectHideFlags: 0
