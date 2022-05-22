@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8584850204894469878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.3842, y: 1.3297, z: -27.8005}
-  m_LocalScale: {x: 0.19173704, y: 0.20705608, z: 0.5699317}
+  m_LocalScale: {x: 5.1769, y: 5.590514, z: 15.388155}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -128,4 +128,3 @@ MonoBehaviour:
   m_BulletInnitSpeed: 120
   player: {fileID: 0}
   enemy: {fileID: 0}
-  bulletDamage: 0
