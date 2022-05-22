@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] public float healthPoints;
     // Start is called before the first frame update
     void Start()
     {

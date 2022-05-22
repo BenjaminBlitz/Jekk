@@ -3651,6 +3651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 400
 --- !u!82 &414244427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12179,9 +12180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 1, y: 0, z: 0}
+  ShoulderOffset: {x: -1, y: 0, z: 0}
   VerticalArmLength: 0.4
-  CameraSide: 1
+  CameraSide: 0
   CameraDistance: 3
   CameraCollisionFilter:
     serializedVersion: 2
@@ -29380,6 +29381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 400
 --- !u!82 &919132147906119656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36496,6 +36498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 400
 --- !u!23 &4889994122706073214
 MeshRenderer:
   m_ObjectHideFlags: 0
