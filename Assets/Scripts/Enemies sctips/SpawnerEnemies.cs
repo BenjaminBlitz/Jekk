@@ -25,7 +25,7 @@ public class SpawnerEnemies : MonoBehaviour
         }
     }
 
-    void Spawning()
+    public void Spawning()
     {
         StartCoroutine(InstantiateEnemies());
     }

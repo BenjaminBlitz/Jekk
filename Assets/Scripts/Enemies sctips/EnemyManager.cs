@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         lvlMob = player.GetComponent<PlayerManagement>().lvlPlayer;
-        enemySpawner = GetComponent<SpawnerEnemies>();
+        enemySpawner = GameObject.FindWithTag("EnemySpawner");
 
         if (lvlMob > 1)
         {
@@ -47,7 +47,7 @@ public class EnemyManager : MonoBehaviour
         if(enemiesAlive == 0)
         {
             SpawnerEnemies.enemmyCount += 1;
-            enemySpawner.Spawning();
+            enemySpawner.GetComponent<SpawnerEnemies>().Spawning();
         }
 
     }
