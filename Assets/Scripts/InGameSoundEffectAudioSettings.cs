@@ -12,6 +12,8 @@ public class InGameSoundEffectAudioSettings : MonoBehaviour
     public AudioClip HitSound;
     public AudioSource WalkSource;
     public AudioClip WalkSound;
+    public AudioSource lvlUpSource;
+    public AudioClip lvlUpSound;
     bool isPlaying;
 
     void Awake()
@@ -25,6 +27,7 @@ public class InGameSoundEffectAudioSettings : MonoBehaviour
         FireSource.volume = soundEffectFloat;
         HitSource.volume = soundEffectFloat;
         WalkSource.volume = soundEffectFloat;
+        lvlUpSource.volume = soundEffectFloat;
     }
 
     void Start()
@@ -32,9 +35,11 @@ public class InGameSoundEffectAudioSettings : MonoBehaviour
         FireSource = gameObject.AddComponent<AudioSource>();
         HitSource = gameObject.AddComponent<AudioSource>();
         WalkSource = gameObject.AddComponent<AudioSource>();
+        lvlUpSource = gameObject.AddComponent<AudioSource>();
         FireSource.clip = FireSound;
         HitSource.clip = HitSound;
         WalkSource.clip = WalkSound;
+        lvlUpSource.clip = lvlUpSound;
         isPlaying = false;
         ContinueSettings();
     }
@@ -55,9 +60,34 @@ public class InGameSoundEffectAudioSettings : MonoBehaviour
             HitSource.Play();
             //isPlaying = false;
         }
-        if (!MenuPause.GamePaused)
+        if (SC_TPSController.isMoving)
         {
+            if (!MenuPause.GamePaused && !isPlaying)
+            {
+                WalkSource.Play();
+                isPlaying = true;
 
+            }
+            if (MenuPause.GamePaused && isPlaying)
+            {
+                WalkSource.Pause();
+                isPlaying = false;
+
+            }
+        }
+        else
+        {
+            if (isPlaying)
+            {
+                WalkSource.Pause();
+                isPlaying = false;
+
+            }
+        }
+        
+        if (!MenuPause.GamePaused && PlayerManagement.lvlUp)
+        {
+            lvlUpSource.Play();
         }
     }
 }

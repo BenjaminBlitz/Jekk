@@ -11,6 +11,7 @@ public class PlayerManagement : MonoBehaviour
     public float armor;
     public float critic;
     public int lifeSteal;
+    public static bool lvlUp;
     [SerializeField] public float attackSpeed;
     public int lvlUpExp = 400;
     private Vector3 scaleChange = new Vector3(2,2,2);
@@ -40,6 +41,7 @@ public class PlayerManagement : MonoBehaviour
 
     void Start()
     {
+        lvlUp = false;
         hasFired = false;
         currentHealth = maxHealth;
         currentExp = 0;
@@ -73,6 +75,7 @@ public class PlayerManagement : MonoBehaviour
         {
             currentExp = 0;
             lvlPlayer += 1;
+            lvlUp = true;
             Growth();
         }
         experienceBar.SetExp(currentExp);
@@ -134,6 +137,7 @@ public class PlayerManagement : MonoBehaviour
     void Update()
     {
         hasFired = false;
+        lvlUp = false;
         if (MenuPause.GamePaused)
         {
             canShoot = false;

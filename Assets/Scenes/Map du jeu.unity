@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
+  m_IndirectSpecularColor: {r: 0.7703147, g: 0.77337736, b: 0.75401694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4898,8 +4898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1449317970}
-  soundEffectSource:
-  - {fileID: 0}
+  soundEffectSource: []
   Music1: {fileID: 8300000, guid: a4ce8b08a0f2db347a124fd8e1338014, type: 3}
 --- !u!114 &530516524
 MonoBehaviour:
@@ -4917,8 +4916,10 @@ MonoBehaviour:
   FireSound: {fileID: 8300000, guid: e6d6e0c9be74ddc45b8ec9b3b05d7065, type: 3}
   HitSource: {fileID: 984463652}
   HitSound: {fileID: 8300000, guid: 82321bd310a57014f88fbae6eb9b60d8, type: 3}
-  WalkSource: {fileID: 984463652}
+  WalkSource: {fileID: 1449317970}
   WalkSound: {fileID: 8300000, guid: 91baf1a94e7b02647bfd60de517ba268, type: 3}
+  lvlUpSource: {fileID: 984463652}
+  lvlUpSound: {fileID: 8300000, guid: f77969d7115169644b48dff88fe8016f, type: 3}
 --- !u!1 &531998541
 GameObject:
   m_ObjectHideFlags: 0
