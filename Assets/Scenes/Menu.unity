@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.5123, y: -16}
+  m_AnchoredPosition: {x: 195, y: 42}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94201722
@@ -512,10 +512,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "BARSOLLE Hugo : Level designer et sound designer\r\n\nBLITZ Benjamin :
-    Gameplay developer et game/level designer\r\n\nBOSQUET\u2013LEFEBVRE Nathana\xEBl
-    : 2D & 3D Gfx Artist et Game/Level Designer\r\n\nDEMASSIAS William : Gameplay
-    developer et producer\r\n\n\nSpecial thanks to DUCOURNEAU Thibault for the musics"
+  m_text: "BARSOLLE Hugo : Level designer and sound designer\r\n\nBLITZ Benjamin
+    : Gameplay developer and game/level designer\r\n\nBOSQUET\u2013LEFEBVRE Nathana\xEBl
+    : 2D & 3D Gfx Artist and Game/Level Designer\r\n\nDEMASSIAS William : Gameplay
+    developer and producer\r\n\n\nSpecial thanks to DUCOURNEAU Thibault for the musics"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -542,10 +542,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 18
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
@@ -811,7 +811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.5123, y: -159}
+  m_AnchoredPosition: {x: 194, y: -93}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381529842
@@ -1100,7 +1100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.48529053, y: 51}
+  m_AnchoredPosition: {x: 193.6, y: 108.99999}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602414584
@@ -1686,7 +1686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5602439, y: 0.6022441}
   m_AnchorMax: {x: 0.5602439, y: 0.6022441}
-  m_AnchoredPosition: {x: -12.485291, y: -104}
+  m_AnchoredPosition: {x: 187, y: -41}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721290867
@@ -3056,14 +3056,14 @@ RectTransform:
   m_GameObject: {fileID: 1205117588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 2119318919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.012207031, y: 186}
+  m_AnchoredPosition: {x: -164, y: 51}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1205117590
@@ -3131,7 +3131,6 @@ RectTransform:
   - {fileID: 724323910}
   - {fileID: 603600987}
   - {fileID: 171014566}
-  - {fileID: 1555892669}
   m_Father: {fileID: 796215609}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3702,7 +3701,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   experienceBar: {fileID: 0}
   canShoot: 1
-  m_BulletInnitSpeed: 0
   m_BulletSpawnTransform: {fileID: 0}
   m_BulletLifeDuration: 0
   aimColliderLayerMask:
@@ -3754,12 +3752,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1217191120}
-  m_RootOrder: 3
+  m_Father: {fileID: 2119318919}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265, y: 201}
+  m_AnchoredPosition: {x: 18, y: -199}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555892670
@@ -4363,6 +4361,7 @@ RectTransform:
   - {fileID: 94201721}
   - {fileID: 381529841}
   - {fileID: 602414583}
+  - {fileID: 1555892669}
   m_Father: {fileID: 796215609}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
