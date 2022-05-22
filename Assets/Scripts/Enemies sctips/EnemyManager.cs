@@ -15,9 +15,9 @@ public class EnemyManager : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("caca");
             gameObject.SetActive(false);
