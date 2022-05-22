@@ -17,11 +17,11 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        /*if (other.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("caca");
             gameObject.SetActive(false);
-        }
+        }*/
     }
 
 }
