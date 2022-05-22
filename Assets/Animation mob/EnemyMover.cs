@@ -15,6 +15,7 @@ public class EnemyMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.FindWithTag("Player");
         transform.LookAt(player.transform);
         transform.position += transform.forward * Movespeed * Time.deltaTime;
         transform.Rotate(1, 270, 1);

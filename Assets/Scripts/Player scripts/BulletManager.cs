@@ -17,6 +17,10 @@ public class BulletManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Mob"))
+        {
+            Destroy(other.gameObject);
+        }
         Destroy(gameObject);
     }
 }

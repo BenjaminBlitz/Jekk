@@ -8,7 +8,6 @@ public class Item : ScriptableObject
     public float percentageValue;
     public Sprite icon = null;
 
-
     public virtual void ChangePlayerStats(PlayerManagement player)
     {
         return;
