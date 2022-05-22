@@ -23,10 +23,11 @@ public class BulletManager : MonoBehaviour
     {
         hasHit= false;
         float speed = m_BulletInnitSpeed;
-        bulletRigidbody.velocity = transform.forward * speed;
+        
         player = GameObject.FindWithTag("Player");
         this.transform.localScale *= player.transform.localScale.x / 5;
-        if (player.GetComponent<PlayerManagement>().lvlPlayer>1) m_BulletInnitSpeed *= player.transform.localScale.x *2; 
+        if (player.GetComponent<PlayerManagement>().lvlPlayer>1) speed *= player.transform.localScale.x /5;
+        bulletRigidbody.velocity = transform.forward * speed;
     }
     private void OnTriggerEnter(Collider other)
     {
