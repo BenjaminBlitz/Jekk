@@ -5,9 +5,11 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
     private Rigidbody bulletRigidbody;
+    private DropItem itemDrop;
     private void Awake()
     {
         bulletRigidbody= GetComponent<Rigidbody>();
+        itemDrop = new DropItem();
 
     }
     private void Start()
@@ -20,7 +22,10 @@ public class BulletManager : MonoBehaviour
         if (other.CompareTag("Mob"))
         {
             Destroy(other.gameObject);
+            itemDrop.Create(transform.position);
+            //Instantiate(GameObject.Find("Armor"), transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }
+
 }
