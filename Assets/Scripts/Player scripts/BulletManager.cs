@@ -41,7 +41,7 @@ public class BulletManager : MonoBehaviour
             playerManager.Heal(playerManager.damage, playerManager.lifeSteal);
             if (enemy.GetComponent<EnemyManager>().healthPoints <= 0)
             {
-                itemDrop.Create(other.transform.position);
+                itemDrop.Create(transform.position);
                 Destroy(other.gameObject);
             }
         }
