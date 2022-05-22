@@ -11,10 +11,11 @@ public class DropItem : MonoBehaviour
     }
     public void Create(Vector3 transform)
     {
-        GameObject lootItem = new GameObject();
+        
         int random = Random.Range(0, 100);
         if (random <= 20)
         {
+            GameObject lootItem = null;
             int randomItem = Random.Range(0, 100);
             if (randomItem <= 30)
             {
@@ -36,8 +37,11 @@ public class DropItem : MonoBehaviour
             {
                 lootItem = GameObject.Find("LifeStealItem");
             }
-
-            Instantiate(lootItem, transform, Quaternion.identity);
+            if(lootItem != null)
+            {
+                Instantiate(lootItem, transform, Quaternion.identity);
+            }
+            
         }
 
     }
