@@ -43,6 +43,7 @@ public class BulletManager : MonoBehaviour
             {
                 itemDrop.Create(transform.position);
                 Destroy(other.gameObject);
+                playerManager.GetExperience(50, playerManager.lvlPlayer);
                 EnemyManager.enemiesAlive -= 1;
             }
         }
