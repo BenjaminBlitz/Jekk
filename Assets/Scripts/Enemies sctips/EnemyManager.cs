@@ -21,8 +21,26 @@ public class EnemyManager : MonoBehaviour
             healthPoints = (lvlMob * (healthPoints / 2.5f));
             damages += (lvlMob * 10);
         }
+        for (int i = 0; i < lvlMob+1; i++)
+        {
+            Growth();
+        }
     }
-
+    void Growth()
+    {
+        if (lvlMob <= 20)
+        {
+            if (lvlMob % 5 == 0)
+            {
+                this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f));
+            }
+            else
+            {
+                this.transform.localScale *= 1.28f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.97f));
+            }
+        }
+        this.GetComponent<EnemyMover>().Movespeed *= this.transform.localScale.x;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -52,5 +70,6 @@ public class EnemyManager : MonoBehaviour
         }
 
     }
+
 
 }

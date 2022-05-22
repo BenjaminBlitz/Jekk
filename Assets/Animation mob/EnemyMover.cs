@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] float Movespeed;
+    [SerializeField] public float Movespeed;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
