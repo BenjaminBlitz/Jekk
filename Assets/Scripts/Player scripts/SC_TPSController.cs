@@ -88,8 +88,8 @@ public class SC_TPSController : MonoBehaviour
         }
 
         if (Input.GetButton("Jump") && characterController.isGrounded)
-        { 
-            moveDirection.y = jumpSpeed * transform.localScale.x;
+        {
+            moveDirection.y = jumpSpeed * Mathf.Pow(transform.localScale.x, 0.88f) * 1.05f;
         }
         
 
