@@ -4,6 +4,17 @@ public class ItemPickUp : Interactable
 {
     public Item item;
     public PlayerManagement player;
+    /*private void Start()
+    {
+        GameObject gift = Resources.Load<GameObject>("Prefab/Gift");
+        gift.transform.parent = transform;
+        //gift.transform.parent = transform;
+
+        GameObject test = new GameObject();
+        test.transform.parent = transform;
+
+    }*/
+
     public override void Interact()
     {
         base.Interact();
