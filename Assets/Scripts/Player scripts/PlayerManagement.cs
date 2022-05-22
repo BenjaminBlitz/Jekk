@@ -27,6 +27,7 @@ public class PlayerManagement : MonoBehaviour
     public bool canShoot = true;
     public static bool hasFired;
 
+
     [Header("Shoot Setup")]
     //[SerializeField] GameObject m_BulletPrefab;
     //[SerializeField] float m_BulletInnitSpeed;
@@ -45,6 +46,7 @@ public class PlayerManagement : MonoBehaviour
         hasFired = false;
         currentHealth = maxHealth;
         currentExp = 0;
+        
 
         CreateLvlManager();
         experienceBar.SetExp(currentExp);

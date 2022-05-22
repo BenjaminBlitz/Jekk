@@ -17,6 +17,10 @@ public class SC_TPSController : MonoBehaviour
     float turnSmoothVelocity;
     public float turnSmoothTime = 0.1f;
 
+    private Animator animator;
+    int moveXAnimation;
+    int moveZAnimation;
+
 
 
     Vector3 velocity;
@@ -28,10 +32,20 @@ public class SC_TPSController : MonoBehaviour
         isMoving = false;
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+
+    }
+
+    void Awake()
+    {
+
+        animator = GetComponent<Animator>();
+        moveXAnimation = Animator.StringToHash("Turn");
+        moveZAnimation = Animator.StringToHash("Forward");
     }
 
     void Update()
     {
+
         isMoving = false;
         if (MenuPause.GamePaused)
         {
@@ -92,7 +106,6 @@ public class SC_TPSController : MonoBehaviour
             moveDirection.y = jumpSpeed * Mathf.Pow(transform.localScale.x, 0.88f) * 1.05f;
         }
         
-
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
@@ -101,9 +114,13 @@ public class SC_TPSController : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
 
+        animator.SetFloat(moveXAnimation, direction.x);
+        animator.SetFloat(moveZAnimation, direction.z);
+
         // Player and Camera rotation
         if (canMove)
         {
+
             rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
             rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
