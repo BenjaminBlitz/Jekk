@@ -43,6 +43,7 @@ public class BulletManager : MonoBehaviour
             {
                 itemDrop.Create(transform.position);
                 Destroy(other.gameObject);
+                EnemyManager.enemiesAlive -= 1;
             }
         }
         if (other.CompareTag("Player")==false)
