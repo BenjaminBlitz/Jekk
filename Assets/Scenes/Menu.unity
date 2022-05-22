@@ -3056,14 +3056,14 @@ RectTransform:
   m_GameObject: {fileID: 1205117588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2119318919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164, y: 51}
+  m_AnchoredPosition: {x: -155, y: 23}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1205117590
@@ -3694,6 +3694,7 @@ MonoBehaviour:
   damage: 0
   armor: 0
   critic: 0
+  lifeSteal: 0
   attackSpeed: 0
   lvlUpExp: 400
   inventory: {fileID: 0}
@@ -3708,7 +3709,6 @@ MonoBehaviour:
     m_Bits: 0
   debugTransform: {fileID: 0}
   pfBulletProjectile: {fileID: 0}
-  m_CoolDownDuration: 0
 --- !u!4 &1468264013
 Transform:
   m_ObjectHideFlags: 0
