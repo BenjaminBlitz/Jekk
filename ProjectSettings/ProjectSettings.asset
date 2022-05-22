@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Jekk
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -42,10 +42,10 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
+  - logo: {fileID: 21300000, guid: 2371719ba5406054fa27fa7d27c38c27, type: 3}
+    duration: 2
   - logo: {fileID: 21300000, guid: 92d10c98088dedc49b69ac62befbd2ca, type: 3}
     duration: 3.7
-  - logo: {fileID: 0}
-    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 616c6e9ec5cab7a48b58a3a56eb8db60, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
