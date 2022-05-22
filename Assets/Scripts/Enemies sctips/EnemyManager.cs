@@ -24,28 +24,28 @@ public class EnemyManager : MonoBehaviour
             healthPoints = (lvlMob * (healthPoints / 2.5f));
             damages += (lvlMob * 10);
         }
-        for (int i = 0; i < lvlMob+1; i++)
-        {
-            Growth();
-        }
+       
+        
+        Growth();
+        
     }
     void Growth()
     {
         if (lvlMob == 5)
         {
-            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*2;
+            this.transform.localScale = player.transform.localScale / 3;
         }
         if (lvlMob == 10)
         {
-            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*3;
+            this.transform.localScale = player.transform.localScale / 3;
         }
         if (lvlMob == 15)
         {
-            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*4;
+            this.transform.localScale = player.transform.localScale / 3;
         }
         if (lvlMob == 20)
         {
-            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*5;
+            this.transform.localScale = player.transform.localScale / 3;
         }
         this.GetComponent<EnemyMover>().Movespeed *= this.transform.localScale.x;
     }
