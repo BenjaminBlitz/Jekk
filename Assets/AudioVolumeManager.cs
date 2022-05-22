@@ -30,7 +30,7 @@ public class AudioVolumeManager : MonoBehaviour
         if (firstPlayInt == 0)
         {
             volumeFloat = 0.25f;
-            soundEffectFloat = 0.5f;
+            soundEffectFloat = 0.125f;
             volumeSlider.value = volumeFloat;
             soundEffectSlider.value = soundEffectFloat;
             PlayerPrefs.SetFloat(VolumePref, volumeFloat);
