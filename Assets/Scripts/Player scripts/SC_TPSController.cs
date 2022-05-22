@@ -110,6 +110,7 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             //playerCameraParent.localPosition = new Vector3(-(Mathf.Atan(transform.localScale.x)*Mathf.Rad2Deg - Mathf.Atan(2.1134f) * Mathf.Rad2Deg) /110, playerCameraParent.localPosition.y, -(Mathf.Atan(transform.localScale.x) * Mathf.Rad2Deg - Mathf.Atan(2.1134f) * Mathf.Rad2Deg) / 17);
             playerCameraParent.localPosition = new Vector3(playerCameraParent.localPosition.x, (Mathf.Atan(transform.localScale.x) * Mathf.Rad2Deg + 150) / 151.6f, -(Mathf.Atan(transform.localScale.x) * Mathf.Rad2Deg - Mathf.Atan(2.113485f) * Mathf.Rad2Deg) / 17);
+            transform.eulerAngles = new Vector2(0, rotation.y);
         }
     }
 }
