@@ -30,17 +30,29 @@ public class BulletManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         hasHit= false;
         enemy = GameObject.FindWithTag("Mob");
-        bulletDamage = player.GetComponent<PlayerManagement>().damage;
+        bulletDamage = player.GetComponent<PlayerManagement>().damage * GoCrit(player.GetComponent<PlayerManagement>());
         if (other.CompareTag("Mob"))
         {
             hasHit = true;
             enemy.GetComponent<EnemyManager>().healthPoints -= bulletDamage;
             if (enemy.GetComponent<EnemyManager>().healthPoints <= 0)
             {
+                itemDrop.Create(other.transform.position);
                 Destroy(other.gameObject);
-                itemDrop.Create(transform.position);
             }
         }
         Destroy(gameObject);
+    }
+
+    private int GoCrit(PlayerManagement player)
+    {
+        int random = Random.Range(0, 100);
+
+        if(random < player.critic)
+        {
+            return 2;
+        }
+        return 1;
+
     }
 }

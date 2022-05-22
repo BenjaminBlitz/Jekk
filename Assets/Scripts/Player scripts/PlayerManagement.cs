@@ -150,7 +150,7 @@ public class PlayerManagement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            GetExperience(20, lvlPlayer);
+            GetExperience(200, lvlPlayer);
         }
         Vector3 mouseWorldPosition = Vector3.zero;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
