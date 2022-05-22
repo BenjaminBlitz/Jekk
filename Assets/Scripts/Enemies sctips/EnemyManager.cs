@@ -9,11 +9,9 @@ public class EnemyManager : MonoBehaviour
     public GameObject player;
     public GameObject enemySpawner;
     public static int enemiesAlive = 0;
-    public int wave;
     int lvlMob = 1; 
     float damages = 20;
 
-    GameObject Waves = GameObject.Find("WaveNumber");
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +20,6 @@ public class EnemyManager : MonoBehaviour
         lvlMob = player.GetComponent<PlayerManagement>().lvlPlayer;
         enemySpawner = GameObject.FindWithTag("EnemySpawner");
 
-        wave = 1;
-        Waves.AddComponent<WaveDisplay>();
-        Waves.GetComponent<WaveDisplay>().CreateWave(1);
 
         if (lvlMob > 1)
         {
@@ -59,10 +54,10 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(enemiesAlive == 0)
         {
-            wave += 1;
-            Waves.GetComponent<WaveDisplay>().CreateWave(wave);
+            SpawnerEnemies.enemmyCount += 1;
             enemySpawner.GetComponent<SpawnerEnemies>().Spawning();
         }
 
