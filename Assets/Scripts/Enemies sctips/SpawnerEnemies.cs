@@ -12,7 +12,7 @@ public class SpawnerEnemies : MonoBehaviour
     {
         pos = new Vector3(135, 6.4f, 10013);
         enemmyCount = 3;
-        StartCoroutine(InstantiateEnemies());
+        Spawning();
     }
 
     IEnumerator InstantiateEnemies()
@@ -25,6 +25,10 @@ public class SpawnerEnemies : MonoBehaviour
         }
     }
 
+    public void Spawning()
+    {
+        StartCoroutine(InstantiateEnemies());
+    }
 
     // Update is called once per frame
     void Update()
