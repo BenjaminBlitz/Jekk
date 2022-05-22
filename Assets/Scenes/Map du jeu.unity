@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.77029306, g: 0.77334356, b: 0.75401866, a: 1}
+  m_IndirectSpecularColor: {r: 0.77028745, g: 0.7734031, b: 0.7540793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -695,6 +695,7 @@ MonoBehaviour:
   armor: 0
   critic: 0
   lifeSteal: 0
+  score: 0
   attackSpeed: 0
   lvlUpExp: 400
   inventory: {fileID: 0}
@@ -3862,6 +3863,7 @@ MonoBehaviour:
   armor: 0
   critic: 0
   lifeSteal: 0
+  score: 0
   attackSpeed: 0
   lvlUpExp: 400
   inventory: {fileID: 0}
@@ -13345,7 +13347,7 @@ GameObject:
   - component: {fileID: 1519554324}
   m_Layer: 0
   m_Name: generator
-  m_TagString: Untagged
+  m_TagString: EnemySpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18525,6 +18527,7 @@ MonoBehaviour:
   armor: {fileID: 691752963}
   attackSpeed: {fileID: 1236590234}
   LifeSteal: {fileID: 455302723}
+  Score: {fileID: 0}
 --- !u!1 &2028731334
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,10 +37,6 @@ public class EnemyManager : MonoBehaviour
             {
                 this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f));
             }
-            else
-            {
-                this.transform.localScale *= 1.28f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.97f));
-            }
         }
         this.GetComponent<EnemyMover>().Movespeed *= this.transform.localScale.x;
     }
