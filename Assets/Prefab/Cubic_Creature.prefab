@@ -714,6 +714,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 400
+  player: {fileID: 0}
+  damages: 0
+  lvlMob: 0
 --- !u!1 &3866215380069477735
 GameObject:
   m_ObjectHideFlags: 0

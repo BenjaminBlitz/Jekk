@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
-{
+{   
+    
     [SerializeField] public float healthPoints;
     public GameObject player;
-    public float damages;
+    
+    int lvlMob = 1; 
+    float damages = 20;
     // Start is called before the first frame update
     void Start()
     {
-        damages = 20;
+
+        player = GameObject.FindWithTag("Player");
+        lvlMob = player.GetComponent<PlayerManagement>().lvlPlayer;
+        if (lvlMob > 1)
+        {
+            healthPoints = (lvlMob * (healthPoints / 2.5f));
+            damages += (lvlMob * 10);
+        }
     }
 
     // Update is called once per frame
@@ -23,7 +33,7 @@ public class EnemyManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        player = GameObject.FindWithTag("Player");
+        
         if (other.CompareTag("Player"))
         {
             player.GetComponent<PlayerManagement>().currentHealth -= damages;

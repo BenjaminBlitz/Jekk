@@ -42,7 +42,7 @@ public class SC_TPSController : MonoBehaviour
             canMove = true;
         }
 
-        
+
         /*
 
         // We are grounded, so recalculate move direction based on axes
@@ -57,9 +57,9 @@ public class SC_TPSController : MonoBehaviour
 
         */
         //jump
-        
 
-        if (characterController.isGrounded )
+
+        if (characterController.isGrounded)
         {
             velocity.y = -2f;
         }
@@ -91,7 +91,7 @@ public class SC_TPSController : MonoBehaviour
         {
             moveDirection.y = jumpSpeed * Mathf.Pow(transform.localScale.x, 0.88f) * 1.05f;
         }
-        
+
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
