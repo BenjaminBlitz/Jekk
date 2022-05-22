@@ -23,7 +23,7 @@ public class PlayerManagement : MonoBehaviour
     public HealthBar healthBar;
     public ExperienceBar experienceBar;
     public bool canShoot = true;
-
+    public static bool hasFired;
 
     [Header("Shoot Setup")]
     //[SerializeField] GameObject m_BulletPrefab;
@@ -40,6 +40,7 @@ public class PlayerManagement : MonoBehaviour
 
     void Start()
     {
+        hasFired = false;
         currentHealth = maxHealth;
         currentExp = 0;
 
@@ -130,6 +131,7 @@ public class PlayerManagement : MonoBehaviour
 
     void Update()
     {
+        hasFired = false;
         if (MenuPause.GamePaused)
         {
             canShoot = false;
@@ -170,6 +172,7 @@ public class PlayerManagement : MonoBehaviour
             Vector3 aimDir = (mouseWorldPosition - m_BulletSpawnTransform.position).normalized;
             Instantiate(pfBulletProjectile, m_BulletSpawnTransform.position, Quaternion.LookRotation(aimDir, Vector3.up));
             m_NextShootTime = Time.time + m_CoolDownDuration;
+            hasFired = true;
         }
         // SHOOT2
         /*
