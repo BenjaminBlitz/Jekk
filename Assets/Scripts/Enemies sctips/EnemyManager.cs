@@ -57,7 +57,7 @@ public class EnemyManager : MonoBehaviour
         
         if(enemiesAlive == 0)
         {
-            SpawnerEnemies.enemmyCount += 1;
+            print("ici");
             enemySpawner.GetComponent<SpawnerEnemies>().Spawning();
         }
 

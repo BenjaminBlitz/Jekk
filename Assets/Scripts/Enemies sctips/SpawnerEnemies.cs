@@ -14,12 +14,7 @@ public class SpawnerEnemies : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         lvl = player.GetComponent<PlayerManagement>().lvlPlayer;
-        if(lvl >=0 && lvl<5){
-            pos = new Vector3(135, 6.4f, 10013);
-        }
-        if (lvl >= 5 && lvl<10){
-            pos = new Vector3(129, 3.5f, 10381);
-        }
+        pos = new Vector3(135, 6.4f, 10013);
         enemmyCount = 2;
         Spawning();
     }
@@ -37,6 +32,7 @@ public class SpawnerEnemies : MonoBehaviour
 
     public void Spawning()
     {
+        print("coucou");
         StartCoroutine(InstantiateEnemies());
     }
 
