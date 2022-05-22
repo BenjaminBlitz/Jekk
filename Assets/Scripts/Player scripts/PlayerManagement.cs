@@ -60,7 +60,7 @@ public class PlayerManagement : MonoBehaviour
 
    
 
-    void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage * 1/(0.05f*armor + 1);
         healthBar.SetHealth(currentHealth);
