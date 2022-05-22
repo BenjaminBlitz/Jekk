@@ -59,13 +59,10 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if(enemiesAlive == 0)
         {
             wave += 1;
             Waves.GetComponent<WaveDisplay>().CreateWave(wave);
-
-            SpawnerEnemies.enemmyCount += 1;
             enemySpawner.GetComponent<SpawnerEnemies>().Spawning();
         }
 

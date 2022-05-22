@@ -5,18 +5,28 @@ using UnityEngine;
 public class SpawnerEnemies : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject player;
     public Vector3 pos;
-    public static int enemmyCount;
+    public int lvl;
+    int enemmyCount;
 
     void Start()
     {
-        pos = new Vector3(135, 6.4f, 10013);
-        enemmyCount = 3;
+        player = GameObject.FindWithTag("Player");
+        lvl = player.GetComponent<PlayerManagement>().lvlPlayer;
+        if(lvl >=0 && lvl<5){
+            pos = new Vector3(135, 6.4f, 10013);
+        }
+        if (lvl >= 5 && lvl<10){
+            pos = new Vector3(129, 3.5f, 10381);
+        }
+        enemmyCount = 2;
         Spawning();
     }
 
     IEnumerator InstantiateEnemies()
     {
+        enemmyCount += 1;
         for (int i = 0; i < enemmyCount; i++)
         {
             Instantiate(enemy, pos, Quaternion.identity);
