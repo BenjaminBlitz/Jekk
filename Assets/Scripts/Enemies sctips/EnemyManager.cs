@@ -31,12 +31,21 @@ public class EnemyManager : MonoBehaviour
     }
     void Growth()
     {
-        if (lvlMob <= 20)
+        if (lvlMob == 5)
         {
-            if (lvlMob % 5 == 0)
-            {
-                this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f));
-            }
+            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*2;
+        }
+        if (lvlMob == 10)
+        {
+            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*3;
+        }
+        if (lvlMob == 15)
+        {
+            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*4;
+        }
+        if (lvlMob == 20)
+        {
+            this.transform.localScale *= 5.8f / (this.transform.localScale.x / Mathf.Pow(this.transform.localScale.x, 0.7f))*5;
         }
         this.GetComponent<EnemyMover>().Movespeed *= this.transform.localScale.x;
     }
