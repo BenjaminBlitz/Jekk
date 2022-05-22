@@ -13,6 +13,11 @@ public class Mouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (AudioVolumeManager.isInGame)
+        {
+            if(MenuPause.GamePaused) Cursor.visible = true;
+            else Cursor.visible = false;
+        }
+        else Cursor.visible = true;
     }
 }
