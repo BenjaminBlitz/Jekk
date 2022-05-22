@@ -10,6 +10,8 @@ public class BulletManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public float bulletDamage;
+    public static bool hasHit;
+
     private void Awake()
     {
         bulletRigidbody= GetComponent<Rigidbody>();
@@ -19,16 +21,19 @@ public class BulletManager : MonoBehaviour
 
     private void Start()
     {
+        hasHit= false;
         float speed = m_BulletInnitSpeed;
         bulletRigidbody.velocity = transform.forward * speed;
     }
     private void OnTriggerEnter(Collider other)
     {
         player = GameObject.FindWithTag("Player");
+        hasHit= false;
         enemy = GameObject.FindWithTag("Mob");
         bulletDamage = player.GetComponent<PlayerManagement>().damage;
         if (other.CompareTag("Mob"))
         {
+            hasHit = true;
             enemy.GetComponent<EnemyManager>().healthPoints -= bulletDamage;
             if (enemy.GetComponent<EnemyManager>().healthPoints <= 0)
             {
