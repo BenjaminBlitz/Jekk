@@ -10,7 +10,8 @@ public class PlayerManagement : MonoBehaviour
     public int damage;
     public float armor;
     public float critic;
-    public float attackSpeed;
+    public int lifeSteal;
+    [SerializeField] public float attackSpeed;
     public int lvlUpExp = 400;
     private Vector3 scaleChange = new Vector3(2,2,2);
 
@@ -35,7 +36,6 @@ public class PlayerManagement : MonoBehaviour
     [SerializeField] private Transform pfBulletProjectile;
 
     //cooldown
-    [SerializeField] float m_CoolDownDuration;
     float m_NextShootTime;
 
     void Start()
@@ -50,6 +50,8 @@ public class PlayerManagement : MonoBehaviour
 
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealthText(maxHealth, maxHealth);
+        attackSpeed = 1.5f;
+        lifeSteal = 10;
         m_NextShootTime = Time.time;
     }
 
@@ -169,7 +171,7 @@ public class PlayerManagement : MonoBehaviour
             //ShootBullet();
             Vector3 aimDir = (mouseWorldPosition - m_BulletSpawnTransform.position).normalized;
             Instantiate(pfBulletProjectile, m_BulletSpawnTransform.position, Quaternion.LookRotation(aimDir, Vector3.up));
-            m_NextShootTime = Time.time + m_CoolDownDuration;
+            m_NextShootTime = Time.time + attackSpeed;
         }
         // SHOOT2
         /*
