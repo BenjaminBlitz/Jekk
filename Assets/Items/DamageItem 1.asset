@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b903104f18d4c45a042fc93e4f71cf, type: 3}
   m_Name: DamageItem 1
   m_EditorClassIdentifier: 
-  itemName: New Item
+  itemName: DamageItem
   baseValue: 0
   percentageValue: 2
   icon: {fileID: 0}
