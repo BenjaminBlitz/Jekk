@@ -45,7 +45,12 @@ public class BulletManager : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-        Destroy(gameObject);
+        if (other.CompareTag("Player")==false)
+        {
+            Destroy(gameObject);
+        }
+            
+        //Destroy(gameObject);
     }
 
     private int GoCrit(PlayerManagement player)
