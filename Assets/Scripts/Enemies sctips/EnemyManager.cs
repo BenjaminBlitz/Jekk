@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour
     
     [SerializeField] public float healthPoints;
     public GameObject player;
-    
+    public static int enemiesAlive = 0;
     int lvlMob = 1; 
     float damages = 20;
     // Start is called before the first frame update

@@ -81,7 +81,7 @@ public class PlayerManagement : MonoBehaviour
         healthBar.SetHealthText(currentHealth, maxHealth);
     }
 
-    void GetExperience(int experience, int lvlplay)
+    public void GetExperience(int experience, int lvlplay)
     {
         currentExp += experience;
         experienceBar.SetMaxExp(lvlManager[lvlplay]);
