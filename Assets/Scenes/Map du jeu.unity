@@ -28862,20 +28862,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.95, y: 1.9, z: 3.57}
   m_Center: {x: 0, y: 0.95, z: -0.05}
---- !u!114 &187480621308362468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839577771852580948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4d9bc79c7561245983d6a244420f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movespeed: 9
-  player: {fileID: 0}
 --- !u!4 &193476661400338566
 Transform:
   m_ObjectHideFlags: 0
@@ -35703,7 +35689,6 @@ GameObject:
   - component: {fileID: 3839577771852580944}
   - component: {fileID: 3839577771852580947}
   - component: {fileID: 3839577771852580946}
-  - component: {fileID: 187480621308362468}
   - component: {fileID: 4875854981648872623}
   m_Layer: 0
   m_Name: Cubic_Creature (1)
