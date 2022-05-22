@@ -31,12 +31,14 @@ public class BulletManager : MonoBehaviour
         hasHit= false;
         //enemy = GameObject.FindWithTag("Mob");
         enemy = other.gameObject;
-        bulletDamage = player.GetComponent<PlayerManagement>().damage * GoCrit(player.GetComponent<PlayerManagement>());
+        PlayerManagement playerManager = player.GetComponent<PlayerManagement>();
+        bulletDamage = playerManager.damage * GoCrit(playerManager);
 
         if (other.CompareTag("Mob"))
         {
             hasHit = true;
             enemy.GetComponent<EnemyManager>().healthPoints -= bulletDamage;
+            playerManager.Heal(playerManager.damage, playerManager.lifeSteal);
             if (enemy.GetComponent<EnemyManager>().healthPoints <= 0)
             {
                 itemDrop.Create(other.transform.position);

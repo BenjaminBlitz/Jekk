@@ -10,7 +10,7 @@ public class PlayerManagement : MonoBehaviour
     public int damage;
     public float armor;
     public float critic;
-    public int lifeSteal;
+    public float lifeSteal;
     public static bool lvlUp;
     [SerializeField] public float attackSpeed;
     public int lvlUpExp = 400;
@@ -63,6 +63,16 @@ public class PlayerManagement : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage * 1/(0.05f*armor + 1);
+        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealthText(currentHealth, maxHealth);
+    }
+
+    public void Heal(float damage, float lifeSteal)
+    {
+        float healVar = currentHealth;
+        healVar += damage * (lifeSteal/100);
+        if (healVar >= maxHealth) return;
+        currentHealth += damage * (lifeSteal / 100);
         healthBar.SetHealth(currentHealth);
         healthBar.SetHealthText(currentHealth, maxHealth);
     }
