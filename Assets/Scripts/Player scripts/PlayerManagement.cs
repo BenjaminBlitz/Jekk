@@ -162,6 +162,16 @@ public class PlayerManagement : MonoBehaviour
             canShoot = true;
         }
 
+        if (currentHealth < 0)
+        {
+            GameOverMenu.isDead = true;
+        }
+
+        if (lvlPlayer >= 25)
+        {
+            GameOverMenu.hasWon = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
