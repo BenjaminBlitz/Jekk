@@ -11,6 +11,7 @@ public class PlayerManagement : MonoBehaviour
     public float armor;
     public float critic;
     public float lifeSteal;
+    public int score; 
     public static bool lvlUp;
     [SerializeField] public float attackSpeed;
     public int lvlUpExp = 400;
@@ -46,6 +47,7 @@ public class PlayerManagement : MonoBehaviour
         hasFired = false;
         currentHealth = maxHealth;
         currentExp = 0;
+        score = 0;
         
 
         CreateLvlManager();
