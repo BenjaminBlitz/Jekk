@@ -17,8 +17,12 @@ public class EnemyMover : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         transform.LookAt(player.transform);
-        //transform.position += transform.forward * Movespeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position,new Vector3(player.transform.position.x,transform.position.y,player.transform.position.z),Movespeed);
+        if (transform.position.y < 1)
+        {
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+        }
+        transform.position += transform.forward * Movespeed * Time.deltaTime;
+        //transform.position = Vector3.MoveTowards(transform.position,new Vector3(player.transform.position.x,transform.position.y,player.transform.position.z),Movespeed);
         transform.Rotate(1, 270, 1);
     }
 }
