@@ -6,6 +6,7 @@ public class BulletManager : MonoBehaviour
 {
     private Rigidbody bulletRigidbody;
     private DropItem itemDrop;
+    [SerializeField] float m_BulletInnitSpeed;
     private void Awake()
     {
         bulletRigidbody= GetComponent<Rigidbody>();
@@ -14,7 +15,7 @@ public class BulletManager : MonoBehaviour
     }
     private void Start()
     {
-        float speed = 50f;
+        float speed = m_BulletInnitSpeed;
         bulletRigidbody.velocity = transform.forward * speed;
     }
     private void OnTriggerEnter(Collider other)

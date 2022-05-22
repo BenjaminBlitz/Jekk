@@ -27,7 +27,7 @@ public class PlayerManagement : MonoBehaviour
 
     [Header("Shoot Setup")]
     //[SerializeField] GameObject m_BulletPrefab;
-    [SerializeField] float m_BulletInnitSpeed;
+    //[SerializeField] float m_BulletInnitSpeed;
     [SerializeField] Transform m_BulletSpawnTransform;
     [SerializeField] float m_BulletLifeDuration;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();

@@ -601,7 +601,6 @@ MonoBehaviour:
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
   canShoot: 1
-  m_BulletInnitSpeed: 0
   m_BulletSpawnTransform: {fileID: 0}
   m_BulletLifeDuration: 0
   aimColliderLayerMask:
@@ -4603,7 +4602,6 @@ MonoBehaviour:
   healthBar: {fileID: 671726568}
   experienceBar: {fileID: 676391495}
   canShoot: 1
-  m_BulletInnitSpeed: 50
   m_BulletSpawnTransform: {fileID: 478074840}
   m_BulletLifeDuration: 5
   aimColliderLayerMask:
