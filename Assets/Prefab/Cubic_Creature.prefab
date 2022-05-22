@@ -497,13 +497,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4468480192802587726}
-  - component: {fileID: 3839577771595423479}
   - component: {fileID: 3839577771595423478}
+  - component: {fileID: 4875854981369160207}
+  - component: {fileID: 3839577771595423479}
+  - component: {fileID: 3839577771595423474}
   - component: {fileID: 3839577771595423473}
   - component: {fileID: 3839577771595423472}
   - component: {fileID: 3839577771595423475}
-  - component: {fileID: 3839577771595423474}
-  - component: {fileID: 4875854981369160207}
   m_Layer: 0
   m_Name: Cubic_Creature
   m_TagString: Mob
@@ -530,20 +530,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3839577771595423479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839577771595423476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4d9bc79c7561245983d6a244420f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movespeed: 9
-  player: {fileID: 0}
 --- !u!95 &3839577771595423478
 Animator:
   serializedVersion: 3
@@ -563,6 +549,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4875854981369160207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839577771595423476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 400
+  player: {fileID: 0}
+--- !u!114 &3839577771595423479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839577771595423476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4d9bc79c7561245983d6a244420f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movespeed: 7
+  player: {fileID: 0}
+--- !u!114 &3839577771595423474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839577771595423476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSound: {fileID: 3839577771595423473}
+  Sound: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
 --- !u!82 &3839577771595423473
 AudioSource:
   m_ObjectHideFlags: 0
@@ -688,36 +716,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3839577771595423474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839577771595423476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce6a4be9c1f22ce45aa045a64a371a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameSound: {fileID: 3839577771595423473}
-  Sound: {fileID: 8300000, guid: 21a8ceeb1c1e99349b03f38f697a5bc7, type: 3}
---- !u!114 &4875854981369160207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839577771595423476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b434b4f2a62304f816e6a91b197124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 400
-  player: {fileID: 0}
-  damages: 0
-  lvlMob: 0
 --- !u!1 &3866215380069477735
 GameObject:
   m_ObjectHideFlags: 0

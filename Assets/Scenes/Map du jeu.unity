@@ -3439,7 +3439,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 400
   player: {fileID: 0}
-  damages: 0
 --- !u!82 &414244427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27279,7 +27278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 400
   player: {fileID: 0}
-  damages: 0
 --- !u!82 &919132147906119656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34398,7 +34396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 400
   player: {fileID: 0}
-  damages: 0
 --- !u!23 &4889994122706073214
 MeshRenderer:
   m_ObjectHideFlags: 0
