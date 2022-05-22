@@ -50,10 +50,14 @@ public class InGameSoundEffectAudioSettings : MonoBehaviour
             FireSource.Play();
             //isPlaying = true;
         }
-        if (!MenuPause.GamePaused && isPlaying)
+        if (!MenuPause.GamePaused && BulletManager.hasHit)
         {
-            GameSound.Pause();
-            isPlaying = false;
+            HitSource.Play();
+            //isPlaying = false;
+        }
+        if (!MenuPause.GamePaused)
+        {
+
         }
     }
 }

@@ -10,7 +10,7 @@ public class SC_TPSController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
-
+    public static bool isMoving;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
@@ -25,13 +25,14 @@ public class SC_TPSController : MonoBehaviour
 
     void Start()
     {
+        isMoving = false;
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
     }
 
     void Update()
     {
-        
+        isMoving = false;
         if (MenuPause.GamePaused)
         {
             canMove = false;
@@ -83,6 +84,7 @@ public class SC_TPSController : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             characterController.Move(moveDir.normalized * transform.localScale.x * speed * Time.deltaTime);
+            isMoving = true;
         }
 
         if (Input.GetButton("Jump") && characterController.isGrounded)

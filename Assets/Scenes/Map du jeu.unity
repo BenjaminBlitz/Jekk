@@ -4779,6 +4779,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cc55d723918aa44927a012131ce923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FireSource: {fileID: 984463652}
+  FireSound: {fileID: 8300000, guid: e6d6e0c9be74ddc45b8ec9b3b05d7065, type: 3}
+  HitSource: {fileID: 984463652}
+  HitSound: {fileID: 8300000, guid: 82321bd310a57014f88fbae6eb9b60d8, type: 3}
+  WalkSource: {fileID: 984463652}
+  WalkSound: {fileID: 8300000, guid: 91baf1a94e7b02647bfd60de517ba268, type: 3}
 --- !u!1 &531998541
 GameObject:
   m_ObjectHideFlags: 0
