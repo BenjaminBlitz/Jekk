@@ -27,13 +27,14 @@ public class PlayerManagement : MonoBehaviour
     public bool canShoot = true;
     public static bool hasFired;
 
+
     [Header("Shoot Setup")]
     //[SerializeField] GameObject m_BulletPrefab;
     //[SerializeField] float m_BulletInnitSpeed;
     [SerializeField] Transform m_BulletSpawnTransform;
     [SerializeField] float m_BulletLifeDuration;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-    //[SerializeField] private Transform debugTransform;
+    [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
 
     //cooldown
@@ -57,7 +58,6 @@ public class PlayerManagement : MonoBehaviour
         attackSpeed = 1.5f;
         lifeSteal = 10;
         m_NextShootTime = Time.time;
-        pfBulletProjectile.localScale *= 3* lvlPlayer;
     }
 
    
@@ -181,7 +181,7 @@ public class PlayerManagement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
-            //debugTransform.position = raycastHit.point;
+            debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
         }
 
