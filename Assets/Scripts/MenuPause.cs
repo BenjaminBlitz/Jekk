@@ -9,6 +9,10 @@ public class MenuPause : MonoBehaviour
     public GameObject pauseMenuUI;
     public AudioSource GameMusic;
 
+    private void Awake()
+    {
+        Resume();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,10 +29,7 @@ public class MenuPause : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M) && GamePaused)
         {
-            GamePaused = false;
-            AudioVolumeManager.isInGame = false;
-            SceneManager.LoadScene("Menu");
-            //SceneManager.UnloadScene("Map du jeu");
+            Quit();
         }
     }
 
@@ -49,6 +50,7 @@ public class MenuPause : MonoBehaviour
 
     public void Quit()
     {
+        GamePaused = false;
         SceneManager.LoadScene("Menu");
     }
 }
