@@ -172,11 +172,6 @@ public class PlayerManagement : MonoBehaviour
             GameOverMenu.hasWon = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-
         if (Input.GetKeyDown(KeyCode.T))
         {
             GetExperience(200, lvlPlayer);
