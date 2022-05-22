@@ -17,6 +17,7 @@ public class EnemyMover : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         transform.LookAt(player.transform);
+        transform.position = new Vector3(transform.position.x, 6, transform.position.z);
         if (transform.position.y < 1)
         {
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
