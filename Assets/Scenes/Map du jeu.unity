@@ -5160,6 +5160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651589671}
+  - component: {fileID: 651589672}
   m_Layer: 5
   m_Name: Wave
   m_TagString: Untagged
@@ -5187,6 +5188,19 @@ RectTransform:
   m_AnchoredPosition: {x: 31.122, y: -15.8}
   m_SizeDelta: {x: 8.68865, y: 8.68865}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &651589672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651589670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d686b3ff38a4a74f991b3e285f8a467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave: {fileID: 375034763}
 --- !u!1 &655463669
 GameObject:
   m_ObjectHideFlags: 0
