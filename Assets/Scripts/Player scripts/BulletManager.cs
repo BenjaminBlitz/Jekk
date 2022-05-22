@@ -9,7 +9,7 @@ public class BulletManager : MonoBehaviour
     [SerializeField] float m_BulletInnitSpeed;
     public GameObject player;
     public GameObject enemy;
-    public float bulletDamage;
+    float bulletDamage;
     public static bool hasHit;
 
     private void Awake()
@@ -29,8 +29,10 @@ public class BulletManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         hasHit= false;
-        enemy = GameObject.FindWithTag("Mob");
+        //enemy = GameObject.FindWithTag("Mob");
+        enemy = other.gameObject;
         bulletDamage = player.GetComponent<PlayerManagement>().damage;
+
         if (other.CompareTag("Mob"))
         {
             hasHit = true;
