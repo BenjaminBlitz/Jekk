@@ -3906,7 +3906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpSpeed: 10
+  jumpSpeed: 8
   gravity: 11.5
   playerCameraParent: {fileID: 1110589577}
   lookSpeed: 2
