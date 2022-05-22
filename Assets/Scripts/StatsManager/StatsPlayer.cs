@@ -10,6 +10,7 @@ public class StatsPlayer : MonoBehaviour
     public TextMeshProUGUI armor;
     public TextMeshProUGUI attackSpeed;
     public TextMeshProUGUI LifeSteal;
+    public TextMeshProUGUI Score;
 
     void Update()
     {
@@ -22,5 +23,6 @@ public class StatsPlayer : MonoBehaviour
         armor.text = "Armor : " + newPlayerArmor.ToString();
         attackSpeed.text = "AttackSpeed : " + player.attackSpeed.ToString();
         LifeSteal.text = "LifeSteal : " + newPlayerLifeSteal.ToString();
+        Score.text = "Score : " + player.score.ToString();
     }
 }

@@ -42,6 +42,7 @@ public class BulletManager : MonoBehaviour
             if (enemy.GetComponent<EnemyManager>().healthPoints <= 0)
             {
                 itemDrop.Create(transform.position);
+                playerManager.score += 100;
                 Destroy(other.gameObject);
             }
         }
